@@ -326,12 +326,12 @@ return (
 Create a `.env.local` file in your client directory:
 
 ```env
-NEXT_PUBLIC_API_URL=http://localhost:5001/api
+NEXT_PUBLIC_API_URL=http://localhost:5001/
 ```
 
 ### API Base URL
 The API service automatically uses:
-- **Development**: `http://localhost:5001/api`
+- **Development**: `http://localhost:5001/`
 - **Production**: Set via `NEXT_PUBLIC_API_URL` environment variable
 
 ## 🚀 Ready to Use!

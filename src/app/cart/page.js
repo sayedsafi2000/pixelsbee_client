@@ -87,8 +87,8 @@ export default function CartPage() {
                   <FaHeart className="text-lg" />
                   Explore Products
                 </Link>
-              </div>
-            ) : (
+            </div>
+          ) : (
               <div className="space-y-6">
                 {cart.map((item, index) => (
                   <div 
@@ -109,7 +109,7 @@ export default function CartPage() {
                       </div>
 
                       {/* Product Details */}
-                      <div className="flex-1 min-w-0">
+                  <div className="flex-1 min-w-0">
                         <div className="flex flex-col h-full justify-between">
                           <div>
                             <Link 
@@ -126,40 +126,40 @@ export default function CartPage() {
                                 per item
                               </span>
                             </div>
-                          </div>
+                  </div>
 
                           {/* Quantity Controls */}
                           <div className="flex items-center gap-4 mt-4">
                             <div className="flex items-center gap-2 bg-neutral-100 dark:bg-neutral-800 rounded-2xl p-1">
-                              <button 
-                                onClick={() => {
-                                  const productData = item.product_id || item;
-                                  add(productData, -1);
-                                }} 
-                                disabled={(item.quantity || 1) <= 1} 
+                    <button 
+                      onClick={() => {
+                        const productData = item.product_id || item;
+                        add(productData, -1);
+                      }} 
+                      disabled={(item.quantity || 1) <= 1} 
                                 className="w-10 h-10 rounded-xl bg-white dark:bg-neutral-700 text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center shadow-sm"
-                              >
+                    >
                                 <FaMinus className="text-sm" />
-                              </button>
+                    </button>
                               <span className="px-4 py-2 text-lg font-bold text-neutral-900 dark:text-white min-w-[3rem] text-center">
                                 {item.quantity || 1}
                               </span>
-                              <button 
-                                onClick={() => {
-                                  const productData = item.product_id || item;
-                                  add(productData, 1);
-                                }} 
+                    <button 
+                      onClick={() => {
+                        const productData = item.product_id || item;
+                        add(productData, 1);
+                      }} 
                                 className="w-10 h-10 rounded-xl bg-white dark:bg-neutral-700 text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20 transition-all flex items-center justify-center shadow-sm"
-                              >
+                    >
                                 <FaPlus className="text-sm" />
-                              </button>
-                            </div>
+                    </button>
+                  </div>
                             
-                            <button 
-                              onClick={() => {
-                                const productId = item.product_id?._id || item.product_id || item._id || item.id;
-                                remove(String(productId || ''));
-                              }} 
+                  <button 
+                    onClick={() => {
+                      const productId = item.product_id?._id || item.product_id || item._id || item.id;
+                      remove(String(productId || ''));
+                    }} 
                               className="px-4 py-2 bg-red-500 text-white rounded-xl font-semibold hover:bg-red-600 transition-colors shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center gap-2"
                             >
                               <FaTrash className="text-sm" />
@@ -238,8 +238,8 @@ export default function CartPage() {
                   >
                     Clear Cart
                   </button>
-                )}
-              </div>
+          )}
+        </div>
 
               {/* Trust Indicators */}
               <div className="mt-8 pt-6 border-t border-neutral-200 dark:border-neutral-700">
@@ -257,7 +257,7 @@ export default function CartPage() {
                     <span className="text-sm">Quality</span>
                   </div>
                 </div>
-              </div>
+            </div>
             </div>
           </div>
         </div>
